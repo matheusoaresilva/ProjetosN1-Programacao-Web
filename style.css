@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+body{
+    height: 100vh;
+    background: linear-gradient(-45deg, #025951, #034159, #02735E, #038C3E);
+    animation: backgroundtransition 8s ease-in-out infinite;
+    background-size: 400%;
+}
+
+@keyframes backgroundtransition {
+    0%{
+        background-position: 0% 80%;
+    }
+    50%{
+        background-position: 80% 100%;
+    }
+    100%{
+        background-position: 0% 90%; 
+    }
+}
+
+
+.title{
+    color: #ffffff;
+    font-size: 5rem;
+    padding-top: 80px;
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.title:hover{
+    color: #CACACA;
+    width: 99%;
+    font-size: 5.2rem;
+    /*-webkit-text-stroke: 0.5px #fff;*/
+}
+
+.container{
+    width: 60%;
+    min-width: 520px;
+    position: absolute;
+    transform: translate(-50%,-40%);
+    left: 50%;
+    top: 50%;
+    border-radius: 10px;
+    padding-bottom: 20px;
+}
+.image-container{
+    position: relative;
+    width: 100%;
+}
+
+img{
+    position: relative;
+    width: 100%;
+    display: none;
+    border-radius: 10px;
+    box-shadow: 4px 5px 10px #000000;
+}
+
+.active{
+    display: block;
+}
+
+.dot-container{
+    width: 150px;
+    margin: 20px auto 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+button{
+    outline: none;
+    cursor: pointer;
+}
+.dot-container button{
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    border: 3px solid #ffff;
+    background-color: transparent;
+}
+.dot-container button:nth-child(1){
+    background-color: #ffff;
+}
+
+#prev,#next{
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    background-color: #22222A;
+    color: #ffffff;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    border: none;
+    border-radius: 3px;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+
+
+#prev:hover, #next:hover {
+    background-color: black;
+    color: #0CF25D;
+    height: 50px;
+    width: 50px;
+}
+#prev{
+    left: 15px;
+}
+#next{
+    right: 15px;
+}
+
+
+
+
